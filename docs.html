@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Docs — AgntSpce</title>
-<meta name="description" content="AgntSpce Documentation — Setup guide, features, configuration, and advanced usage for the Multi-Agent Workspace IDE.">
+<title>Documentation — AgntSpce</title>
+<meta name="description" content="AgntSpce Documentation — Complete guide to setup, features, configuration, and advanced usage for the Multi-Agent Workspace IDE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -20,15 +20,29 @@
       <span class="logo-text">AgntSpce</span>
     </a>
     <nav class="nav-desktop">
-      <a href="index.html#showcase" class="nav-link">App</a>
-      <a href="index.html#features" class="nav-link">Features</a>
-      <a href="index.html#about" class="nav-link">About</a>
-      <a href="index.html#process" class="nav-link">How it works</a>
-      <a href="index.html#install" class="nav-link">Install</a>
-      <a href="docs.html" class="nav-link" style="color:var(--accent)">Docs</a>
-      <a href="index.html#install" class="nav-cta">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        Get Started
+      <div class="dropdown">
+        <button class="dropdown-btn">Product <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown-menu">
+          <a href="index.html" class="dropdown-item">AgntSpce</a>
+          <a href="changelog.html" class="dropdown-item">Changelog</a>
+        </div>
+      </div>
+      <a href="features.html" class="nav-link">Features</a>
+      <div class="dropdown">
+        <button class="dropdown-btn">Resources <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown-menu">
+          <a href="docs.html" class="dropdown-item">Documentation</a>
+          <a href="about.html" class="dropdown-item">About</a>
+          <a href="community.html" class="dropdown-item">Community</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="download.html" class="nav-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a>
+      <a href="https://github.com/AniketWathore/agntspce" target="_blank" rel="noopener" class="nav-github" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
       </a>
     </nav>
     <button class="mobile-btn" id="mobile-btn" aria-label="Menu">
@@ -37,128 +51,137 @@
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html" class="mobile-link">Home</a>
-    <a href="docs.html" class="mobile-link" style="color:var(--accent)">Docs</a>
+    <a href="features.html" class="mobile-link">Features</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="docs.html" class="mobile-link" style="color:var(--accent)">Documentation</a>
+    <a href="pricing.html" class="mobile-link">Pricing</a>
+    <a href="download.html" class="mobile-link">Download</a>
+    <a href="community.html" class="mobile-link">Community</a>
     <a href="https://github.com/AniketWathore/agntspce" target="_blank" rel="noopener" class="mobile-link">GitHub</a>
-    <a href="index.html#install" class="mobile-cta">Get Started</a>
+    <a href="download.html" class="mobile-cta">Download</a>
   </div>
 </header>
 
 <div style="padding-top:var(--nav-height);min-height:100vh">
-  <div class="section-inner" style="max-width:1200px;margin:0 auto;padding:32px 20px">
+  <div style="max-width:1200px;margin:0 auto;padding:32px 20px">
     <div style="display:flex;gap:0">
-      <aside style="display:none;width:240px;flex-shrink:0">
+      <aside class="docs-sidebar" id="docs-sidebar">
         <div style="position:sticky;top:calc(var(--nav-height) + 24px);background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px;max-height:calc(100vh - var(--nav-height) - 48px);overflow-y:auto">
           <div style="font-size:13px;font-weight:700;color:var(--accent);margin-bottom:16px;padding:0 8px">AgntSpce Docs</div>
           <nav class="sidebar-nav" style="display:flex;flex-direction:column;gap:16px">
             <div>
               <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);padding:0 8px;margin-bottom:6px">Getting Started</div>
-              <a href="#overview" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Overview</a>
-              <a href="#setup" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Setup Guide</a>
-              <a href="#first-workspace" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Your First Workspace</a>
+              <a href="#overview" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Overview</a>
+              <a href="#setup" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Setup Guide</a>
+              <a href="#first-workspace" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Your First Workspace</a>
             </div>
             <div>
               <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);padding:0 8px;margin-bottom:6px">Core Features</div>
-              <a href="#workspaces" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Workspaces</a>
-              <a href="#agent-terminals" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Agent Terminals</a>
-              <a href="#shell-terminals" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Shell Terminals</a>
-              <a href="#code-editor" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Code Editor</a>
-              <a href="#git-integration" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Git Integration</a>
+              <a href="#workspaces" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Workspaces</a>
+              <a href="#agent-terminals" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Agent Terminals</a>
+              <a href="#shell-terminals" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Shell Terminals</a>
+              <a href="#code-editor" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Code Editor</a>
+              <a href="#git-integration" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Git Integration</a>
+              <a href="#dashboard" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Dashboard</a>
             </div>
             <div>
               <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);padding:0 8px;margin-bottom:6px">Advanced</div>
-              <a href="#caveman-mode" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Caveman Mode</a>
-              <a href="#output-filter" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Output Filter</a>
-              <a href="#parallel-tasks" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Parallel Tasks</a>
-              <a href="#shortcuts" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Keyboard Shortcuts</a>
-              <a href="#configuration" class="nav-link" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Configuration</a>
+              <a href="#caveman-mode" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Caveman Mode</a>
+              <a href="#output-filter" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Output Filter</a>
+              <a href="#parallel-tasks" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Parallel Tasks</a>
+              <a href="#shortcuts" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Keyboard Shortcuts</a>
+              <a href="#configuration" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Configuration</a>
             </div>
           </nav>
         </div>
       </aside>
+      <style>@media(min-width:1024px){#docs-sidebar{display:block!important}}</style>
 
       <main class="docs-content" style="flex:1;min-width:0;max-width:800px;margin:0 auto;padding:0 16px 80px">
         <section id="overview">
           <h1 style="font-family:var(--font-display);font-size:clamp(28px,3.5vw,40px);font-weight:800;letter-spacing:-.03em;margin-bottom:8px">AgntSpce</h1>
           <p class="lead">An open source desktop workspace for running and monitoring AI coding agents inside PTY-backed terminals.</p>
-          <p>AgntSpce combines workspace management, agent launches, live terminal output, git-aware status tracking, and token-compression metrics in one app. It runs entirely locally — no cloud dependency, no account required.</p>
+          <p>AgntSpce combines workspace management, agent launches, live terminal output, git-aware status tracking, and token-compression metrics in one unified interface. It runs entirely locally — no cloud dependency, no account required, no data ever leaves your machine.</p>
           <div class="info-box">
             <strong>Requirements</strong>
             <ul>
-              <li>macOS (Apple Silicon or Intel) — Windows and Linux support planned</li>
-              <li>Node.js 18+ and npm</li>
-              <li>Git installed</li>
-              <li>One or more AI coding CLI tools (Claude Code, Opencode, Codex, Gemini CLI, etc.)</li>
+              <li><strong>macOS</strong> (Apple Silicon or Intel) — Windows and Linux support planned</li>
+              <li><strong>Node.js 18+</strong> and npm</li>
+              <li><strong>Git</strong> installed</li>
+              <li>One or more <strong>AI coding CLI tools</strong> — Claude Code, Opencode, Codex, Gemini CLI, or any PTY-compatible agent</li>
             </ul>
           </div>
         </section>
 
         <section id="setup">
           <h2>Setup Guide</h2>
-          <p>Install AgntSpce and get it running on your machine in minutes.</p>
+          <p>Install AgntSpce and get it running on your machine in minutes. The app is distributed as source code that you clone, build, and run locally.</p>
           <h3>Install dependencies</h3>
           <div class="code-block"><pre><code>npm install</code></pre></div>
           <h3>Run in development</h3>
           <div class="code-block"><pre><code>npm run dev</code></pre></div>
-          <p>This starts the Vite dev server and the Electron app. The server runs on <code>127.0.0.1:9460</code>.</p>
+          <p>This starts the Vite dev server and the Electron app in development mode. The web server runs on <code>127.0.0.1:9460</code> and the Electron window attaches to it automatically.</p>
           <h3>Build for production</h3>
           <div class="code-block"><pre><code>npm run build</code></pre></div>
           <h3>Package as Electron app</h3>
           <div class="code-block"><pre><code>npm run electron:build</code></pre></div>
-          <p>Outputs <code>.dmg</code> (mac), <code>.exe</code> (win), or <code>.AppImage</code> (linux) depending on your platform.</p>
-          <h3>Preview built app</h3>
+          <p>Outputs platform-specific installers: <code>.dmg</code> (macOS), <code>.exe</code> (Windows), or <code>.AppImage</code> (Linux) depending on your build platform.</p>
+          <h3>Preview the built app</h3>
           <div class="code-block"><pre><code>npm run electron:preview</code></pre></div>
+          <p>Launches the packaged Electron app without rebuilding, useful for quick testing after <code>electron:build</code>.</p>
         </section>
 
         <section id="first-workspace">
           <h2>Your First Workspace</h2>
-          <p>A workspace is where all your agent sessions run. It points to a local directory or git repository.</p>
+          <p>A workspace is the core unit of AgntSpce — it points to a local directory or git repository and contains all your agent sessions, terminal outputs, and workspace metadata.</p>
           <h3>1. Open the Create Workspace dialog</h3>
-          <p>Click the <strong>Create Workspace</strong> button in the sidebar or use <kbd>⌘⇧N</kbd>.</p>
+          <p>Click the <strong>Create Workspace</strong> button in the sidebar, or use the keyboard shortcut <kbd>⌘⇧N</kbd>.</p>
           <h3>2. Choose a source</h3>
-          <p>You can either:</p>
+          <p>You can create a workspace from:</p>
           <ul>
-            <li><strong>Local folder</strong> — Point to any directory on your machine</li>
-            <li><strong>Git URL</strong> — Clone a repository (requires <code>gh</code> auth)</li>
+            <li><strong>Local folder</strong> — Browse and select any directory on your machine</li>
+            <li><strong>Git URL</strong> — Clone a remote repository (requires <code>gh</code> CLI authentication for private repos)</li>
           </ul>
-          <div class="code-block"><pre><code># Or clone from the command line:
+          <div class="code-block"><pre><code># Or clone from the command line first:
 git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></div>
           <h3>3. Launch an agent</h3>
-          <p>With your workspace active, click the <strong>+</strong> button in the terminal area or use <kbd>⌘⇧A</kbd>.</p>
+          <p>With your workspace active, click the <strong>+</strong> button in the terminal area or press <kbd>⌘⇧A</kbd> to open the agent picker. Select your preferred AI coding agent, configure the mode and flags, then launch.</p>
           <h3>4. Start working</h3>
-          <p>Your agent terminal is ready. You can also open a shell terminal (<kbd>⌘⇧S</kbd>), browse files, or open the code editor.</p>
+          <p>Your agent terminal is now ready. You can also open a shell terminal (<kbd>⌘⇧S</kbd>), browse files, or open the code editor. The workspace remembers your session layout across restarts.</p>
         </section>
 
         <section id="workspaces">
           <h2>Workspaces</h2>
-          <p>Workspaces are the foundation of AgntSpce. Each workspace has its own sessions, git context, and file explorer.</p>
+          <p>Workspaces are the foundation of AgntSpce. Each workspace has its own set of agent sessions, shell terminals, git context, file explorer state, and editor tabs.</p>
           <h3>Creating a workspace</h3>
-          <p>Click <strong>Create Workspace</strong> in the sidebar, or use the command palette (<kbd>⌘K</kbd>). You can create from:</p>
+          <p>Click <strong>Create Workspace</strong> in sidebar, or use the command palette (<kbd>⌘K</kbd>). You can create from:</p>
           <ul>
-            <li><strong>Local directory</strong> — picks any folder on disk</li>
-            <li><strong>Git URL</strong> — clones the repo to <code>~/AgntSpce/&lt;name&gt;</code></li>
+            <li><strong>Local directory</strong> — Picks any folder on disk and uses it as the workspace root</li>
+            <li><strong>Git URL</strong> — Clones the repository to <code>~/AgntSpce/&lt;name&gt;</code> and sets up the workspace</li>
           </ul>
           <h3>Switching workspaces</h3>
-          <p>Click a workspace in the sidebar to switch. All your sessions are preserved and restored when you switch back.</p>
+          <p>Click a workspace in the sidebar to switch. All your sessions are preserved and will be restored when you switch back. The workspace switcher shows the current git branch and agent status for each workspace.</p>
           <h3>Managing workspaces</h3>
           <ul>
-            <li><strong>Rename</strong> — Edit the name in the sidebar</li>
-            <li><strong>Duplicate</strong> — File &gt; Duplicate Workspace</li>
-            <li><strong>Export/Import</strong> — File &gt; Save As / Load.</li>
-            <li><strong>Delete</strong> — Moves to trash (restorable)</li>
+            <li><strong>Rename</strong> — Right-click and select Rename, or edit the name inline</li>
+            <li><strong>Duplicate</strong> — File &gt; Duplicate Workspace creates a copy with a new ID</li>
+            <li><strong>Export/Import</strong> — File &gt; Save As exports the workspace config; Load imports it</li>
+            <li><strong>Delete</strong> — Moves to trash (soft-delete, restorable from trash panel)</li>
           </ul>
-          <h3>Workspace config</h3>
-          <p>Each workspace stores metadata locally in <code>~/.agent-workspace/workspaces/&lt;id&gt;.json</code>:</p>
+          <h3>Workspace configuration</h3>
+          <p>Each workspace stores its metadata locally in <code>~/.agent-workspace/workspaces/&lt;id&gt;.json</code>:</p>
           <ul>
-            <li>Repository path and type</li>
+            <li>Repository path and type (local / git)</li>
             <li>Worktree configuration</li>
             <li>Environment variables</li>
             <li>Setup and teardown scripts</li>
+            <li>UI layout preferences</li>
           </ul>
         </section>
 
         <section id="agent-terminals">
           <h2>Agent Terminals</h2>
-          <p>Launch and manage AI coding agent sessions directly inside AgntSpce.</p>
+          <p>Launch and manage AI coding agent sessions directly inside AgntSpce. Each agent runs in its own PTY-backed terminal with full IO streaming, status tracking, and output filtering.</p>
           <h3>Supported agents</h3>
           <div style="overflow-x:auto"><table>
             <thead><tr><th>Agent</th><th>Modes</th><th>Parallel</th><th>Worktree</th></tr></thead>
@@ -173,106 +196,130 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
             </tbody>
           </table></div>
           <h3>Launching an agent</h3>
-          <p>Click <strong>+</strong> or press <kbd>⌘⇧A</kbd>. A picker shows all available agents. Configure mode, flags, model, and verbosity before launch.</p>
+          <p>Click the <strong>+</strong> button in the terminal tab bar or press <kbd>⌘⇧A</kbd>. A picker dialog shows all available agents detected on your system. You can configure the launch mode, CLI flags, model selection, and verbosity level before starting.</p>
           <h3>Status indicators</h3>
           <ul>
-            <li><span class="status-dot idle"></span> <strong>Idle</strong> — Waiting for input</li>
-            <li><span class="status-dot busy"></span> <strong>Busy</strong> — Executing a task</li>
-            <li><span class="status-dot waiting"></span> <strong>Waiting</strong> — Prompting for permission</li>
-            <li><span class="status-dot exited"></span> <strong>Exited</strong> — Process terminated</li>
+            <li><span class="status-dot idle"></span> <strong>Idle</strong> — Agent is running and waiting for input</li>
+            <li><span class="status-dot busy"></span> <strong>Busy</strong> — Agent is actively executing a task</li>
+            <li><span class="status-dot waiting"></span> <strong>Waiting</strong> — Agent is prompting for user permission or input</li>
+            <li><span class="status-dot exited"></span> <strong>Exited</strong> — Process has terminated (may auto-restart)</li>
           </ul>
           <h3>Auto-restart</h3>
-          <p>Claude sessions can auto-restart when they exit. Enable this in Settings.</p>
+          <p>Claude Code sessions can be configured to auto-restart when they exit. Enable this behavior in Settings &gt; Agent &gt; Auto-restart. This is useful for long-running development workflows where the agent should resume after completing a task.</p>
         </section>
 
         <section id="shell-terminals">
           <h2>Shell Terminals</h2>
-          <p>Regular shell sessions alongside your agent terminals. Useful for git commands, build scripts, or any terminal work.</p>
-          <p>Press <kbd>⌘⇧S</kbd> or click the terminal icon in the activity bar. Shell terminals are visually distinct from agent terminals.</p>
+          <p>Regular shell sessions run alongside your agent terminals, giving you full access to your system shell for git commands, build scripts, testing, and any other terminal work.</p>
+          <p>Press <kbd>⌘⇧S</kbd> or click the terminal icon in the activity bar to open a new shell terminal. Shell terminals are visually distinct from agent terminals with a different color scheme and label.</p>
+          <p>You can have multiple shell terminals open simultaneously, each in its own tab. The terminal emulator supports standard xterm features including color output, scrollback, and copy/paste.</p>
         </section>
 
         <section id="code-editor">
           <h2>Code Editor</h2>
-          <p>A built-in code editor powered by Monaco Editor (the engine behind VS Code).</p>
+          <p>A built-in code editor powered by <strong>Monaco Editor</strong> — the same engine that powers VS Code.</p>
           <h3>Opening files</h3>
-          <p>Click any file in the file explorer sidebar. Files open in new tabs.</p>
-          <h3>Editing</h3>
+          <p>Click any file in the file explorer sidebar. Files open in new tabs with a dirty indicator (dot) when unsaved changes exist.</p>
+          <h3>Editing features</h3>
           <ul>
-            <li>Multi-tab editing with dirty indicators</li>
+            <li>Multi-tab editing with drag-and-drop tab reordering</li>
             <li>Language detection by file extension</li>
             <li>Syntax highlighting for 20+ languages</li>
+            <li>Find and replace within files</li>
+            <li>Minimap for quick navigation</li>
           </ul>
           <h3>Supported languages</h3>
-          <p>TypeScript, JavaScript, Python, Rust, Go, Ruby, Java, C++, CSS, HTML, JSON, Markdown, YAML, SQL, and more.</p>
+          <p>TypeScript, JavaScript, Python, Rust, Go, Ruby, Java, C++, C#, CSS, HTML, JSON, Markdown, YAML, SQL, Shell, Dockerfile, TOML, GraphQL, and more. Language support is detected automatically from file extensions.</p>
         </section>
 
         <section id="git-integration">
           <h2>Git Integration</h2>
-          <p>Stay aware of your repository state without leaving the app.</p>
+          <p>Stay aware of your repository state without leaving the app. AgntSpce provides rich git integration for every workspace.</p>
           <h3>Branch tracking</h3>
-          <p>Each session shows its current git branch. Branches are polled every 30 seconds.</p>
+          <p>Each session displays its current git branch in the session header. Branches are polled every 30 seconds to reflect any changes made externally or by agents.</p>
           <h3>Git Review panel</h3>
           <ul>
-            <li><strong>Commit log</strong> — Recent commits with hash, message, author</li>
-            <li><strong>Branches</strong> — All branches sorted by date</li>
-            <li><strong>Working tree diff</strong> — Unstaged changes</li>
-            <li><strong>Commit diff</strong> — Changes in a specific commit</li>
-            <li><strong>File diff</strong> — Per-file diff</li>
+            <li><strong>Commit log</strong> — Recent commits with hash, message, author, and relative timestamp</li>
+            <li><strong>Branches</strong> — All branches listed and sorted by most recent commit date</li>
+            <li><strong>Working tree diff</strong> — Shows unstaged and staged changes in real time</li>
+            <li><strong>Commit diff</strong> — View the full diff of any specific commit</li>
+            <li><strong>File diff</strong> — Per-file side-by-side diff view</li>
           </ul>
           <h3>Worktrees</h3>
-          <p>AgntSpce supports git worktrees for running parallel agent sessions on different branches.</p>
+          <p>AgntSpce supports git worktrees for running parallel agent sessions on different branches simultaneously. Each worktree gets its own isolated working directory while sharing the same git repository, enabling true parallel development without branch conflicts.</p>
+        </section>
+
+        <section id="dashboard">
+          <h2>Dashboard</h2>
+          <p>The Dashboard provides at-a-glance visibility into your workspace activity, agent health, and resource usage.</p>
+          <h3>Workspace stats</h3>
+          <ul>
+            <li>Active agent count and their current statuses</li>
+            <li>Shell terminal sessions</li>
+            <li>Git branch and recent commit information</li>
+            <li>CPU and memory usage per session</li>
+            <li>Uptime and session duration tracking</li>
+          </ul>
+          <h3>Token compression metrics</h3>
+          <p>The dashboard displays real-time token optimization statistics including:</p>
+          <ul>
+            <li>Original vs filtered output byte counts</li>
+            <li>Token reduction percentage by session</li>
+            <li>Filter rules applied and their individual impact</li>
+            <li>Historical trends and cumulative savings</li>
+          </ul>
         </section>
 
         <section id="caveman-mode">
           <h2>Caveman Mode</h2>
-          <p>Reduce token usage by instructing your AI agent to respond more tersely.</p>
+          <p>Reduce token usage by instructing your AI agent to respond with shorter, more concise output. Caveman Mode injects style directives directly into the agent's system prompt.</p>
           <h3>How it works</h3>
-          <p>When enabled, AgntSpce writes a <code>SKILL.md</code> (Opencode) or <code>CLAUDE.md</code> (Claude Code) into your workspace with concise-response instructions.</p>
-          <div class="level-cards">
-            <div class="level-card">
-              <h4>Lite</h4>
-              <p class="level-reduction">~30% fewer tokens</p>
-              <p style="font-size:.8rem;color:var(--text-secondary);margin-bottom:0">Professional tone, no filler words.</p>
+          <p>When enabled, AgntSpce writes a <code>SKILL.md</code> (for Opencode) or <code>CLAUDE.md</code> (for Claude Code) into your workspace root directory with concise-response instructions. The agent reads this file on startup and adjusts its verbosity accordingly.</p>
+          <div class="level-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:16px 0">
+            <div class="level-card" style="padding:20px;text-align:center">
+              <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:600;margin-bottom:6px;color:var(--text)">Lite</h4>
+              <p class="level-reduction">~30% fewer</p>
+              <p style="font-size:.8rem;color:var(--text-secondary);margin-bottom:0">Professional tone, no filler words. Full grammar and sentences preserved.</p>
             </div>
-            <div class="level-card">
-              <h4>Full</h4>
-              <p class="level-reduction">~65% fewer tokens</p>
-              <p style="font-size:.8rem;color:var(--text-secondary);margin-bottom:0">Fragments, short synonyms, minimal articles.</p>
+            <div class="level-card" style="padding:20px;text-align:center">
+              <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:600;margin-bottom:6px;color:var(--text)">Full</h4>
+              <p class="level-reduction">~65% fewer</p>
+              <p style="font-size:.8rem;color:var(--text-secondary);margin-bottom:0">Fragments, short synonyms, minimal articles. Technical terms stay exact.</p>
             </div>
-            <div class="level-card">
-              <h4>Ultra</h4>
-              <p class="level-reduction">~75% fewer tokens</p>
-              <p style="font-size:.8rem;color:var(--text-secondary);margin-bottom:0">Telegraphic, abbreviations, max compression.</p>
+            <div class="level-card" style="padding:20px;text-align:center">
+              <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:600;margin-bottom:6px;color:var(--text)">Ultra</h4>
+              <p class="level-reduction">~75% fewer</p>
+              <p style="font-size:.8rem;color:var(--text-secondary);margin-bottom:0">Telegraphic style, abbreviations, max compression. Strips conjunctions and articles.</p>
             </div>
           </div>
-          <style>.level-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:16px 0}.level-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:8px;padding:20px}.level-card h4{font-size:.95rem;font-weight:600;margin-bottom:6px;color:var(--text)}.level-reduction{font-size:.8rem;color:var(--accent)!important;font-weight:600;margin-bottom:8px}</style>
         </section>
 
         <section id="output-filter">
           <h2>Output Filter</h2>
-          <p>Reduces noise in terminal output before it reaches you, saving tokens and screen space.</p>
+          <p>Reduces noise in terminal output before it reaches your agent's context, saving tokens and screen space.</p>
           <h3>What it filters</h3>
           <ul>
-            <li>ANSI escape sequences — Strips color codes</li>
-            <li>Duplicate lines — Deduplicates repeated output</li>
-            <li>Progress bars — Removes progress indicators</li>
-            <li>Empty lines — Collapses blank lines</li>
-            <li>Skip/Keep patterns — Custom regex rules</li>
+            <li><strong>ANSI escape sequences</strong> — Strips color codes and formatting characters from output</li>
+            <li><strong>Duplicate lines</strong> — Deduplicates repeated lines within a configurable window</li>
+            <li><strong>Progress bars</strong> — Removes progress indicator lines (e.g., npm/git progress output)</li>
+            <li><strong>Empty lines</strong> — Collapses consecutive blank lines</li>
+            <li><strong>Skip/Keep patterns</strong> — Custom regex rules for including or excluding specific output patterns</li>
           </ul>
           <h3>Debug panel</h3>
-          <p>Shows real-time stats: original vs filtered bytes, reduction percentage, rules applied per event.</p>
+          <p>The Output Filter includes a debug panel that shows real-time statistics: original byte count vs filtered byte count, reduction percentage, number of rules applied per event, and a log of filtered content for troubleshooting.</p>
         </section>
 
         <section id="parallel-tasks">
           <h2>Parallel Tasks</h2>
-          <p>Launch multiple agent sessions simultaneously across different worktrees.</p>
+          <p>Launch multiple agent sessions simultaneously across different worktrees to maximize productivity.</p>
           <h3>Concurrency limits</h3>
-          <p>The orchestrator limits parallel execution to 6 concurrent sessions. Additional requests are queued.</p>
+          <p>The orchestrator limits parallel execution to <strong>6 concurrent sessions</strong>. Additional launch requests are queued and automatically started when a slot opens up.</p>
+          <h3>Resource monitoring</h3>
           <ul>
-            <li>CPU usage per session</li>
-            <li>Memory threshold: 1GB</li>
-            <li>Health checks every 15 seconds</li>
-            <li>Max 3 restarts per 60-second window</li>
+            <li><strong>CPU usage</strong> — Tracked per session with throttling at 80%</li>
+            <li><strong>Memory threshold</strong> — Hard limit of 1GB per session</li>
+            <li><strong>Health checks</strong> — Performed every 15 seconds on all active sessions</li>
+            <li><strong>Auto-restart policy</strong> — Maximum 3 restarts per 60-second rolling window to prevent crash loops</li>
           </ul>
         </section>
 
@@ -283,13 +330,14 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
             <tbody>
               <tr><td><kbd>⌘N</kbd></td><td>New Window</td></tr>
               <tr><td><kbd>⌘⇧N</kbd></td><td>New Workspace</td></tr>
-              <tr><td><kbd>⌘⇧A</kbd></td><td>New Agent</td></tr>
+              <tr><td><kbd>⌘⇧A</kbd></td><td>New Agent Session</td></tr>
               <tr><td><kbd>⌘⇧S</kbd></td><td>New Shell Terminal</td></tr>
               <tr><td><kbd>⌘S</kbd></td><td>Save Workspace / File</td></tr>
-              <tr><td><kbd>⌘W</kbd></td><td>Close Window</td></tr>
+              <tr><td><kbd>⌘W</kbd></td><td>Close Window / Tab</td></tr>
               <tr><td><kbd>⌘K</kbd></td><td>Toggle Command Palette</td></tr>
               <tr><td><kbd>⌘B</kbd></td><td>Toggle Chat Sidebar</td></tr>
               <tr><td><kbd>⌘Tab</kbd> / <kbd>⌘⇧Tab</kbd></td><td>Cycle Agent Tabs</td></tr>
+              <tr><td><kbd>⌘1</kbd> — <kbd>⌘9</kbd></td><td>Switch to tab by index</td></tr>
             </tbody>
           </table></div>
         </section>
@@ -297,6 +345,7 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
         <section id="configuration">
           <h2>Configuration</h2>
           <h3><code>config.json</code> (project root)</h3>
+          <p>The project-level configuration file is located at the root of the AgntSpce repository. It controls server settings, session timeouts, and logging.</p>
           <div class="code-block">
 <pre><code>{
   "server": {
@@ -314,15 +363,16 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
 }</code></pre>
           </div>
           <h3><code>~/.agent-workspace/config.json</code> (user config)</h3>
-          <p>Auto-generated on first run. Controls active workspace, recent workspaces, theme preference, and last-workspace memory.</p>
+          <p>Auto-generated on first run. Controls user-specific preferences including active workspace, recent workspaces list, theme preference, and last-workspace memory for automatic restoration on startup.</p>
           <h3>Data locations</h3>
           <table>
             <thead><tr><th>Path</th><th>Purpose</th></tr></thead>
             <tbody>
-              <tr><td><code>~/.agent-workspace/workspaces/</code></td><td>Workspace definitions</td></tr>
-              <tr><td><code>~/.agent-workspace/deleted-workspaces/</code></td><td>Trash (soft-deleted)</td></tr>
-              <tr><td><code>~/.agent-workspace/session-buffers/</code></td><td>Session output buffers</td></tr>
-              <tr><td><code>~/.agent-workspace/caveman-data.json</code></td><td>Caveman mode data</td></tr>
+              <tr><td><code>~/.agent-workspace/workspaces/</code></td><td>Workspace definitions and metadata</td></tr>
+              <tr><td><code>~/.agent-workspace/deleted-workspaces/</code></td><td>Trash for soft-deleted workspaces</td></tr>
+              <tr><td><code>~/.agent-workspace/session-buffers/</code></td><td>Session output buffers and history</td></tr>
+              <tr><td><code>~/.agent-workspace/caveman-data.json</code></td><td>Caveman mode configuration data</td></tr>
+              <tr><td><code>~/.agent-workspace/config.json</code></td><td>User preferences and app settings</td></tr>
             </tbody>
           </table>
         </section>
@@ -338,6 +388,79 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
   </div>
 </div>
 
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="AgntSpce" class="logo-img" width="36" height="36">
+        <span class="logo-text">AgntSpce</span>
+      </a>
+      <p class="footer-tagline">A workspace for your AI agents to communicate, coordinate, and ship work as a team. Open-source, local-first, token-optimized.</p>
+      <div class="footer-social">
+        <a href="https://github.com/AniketWathore/agntspce" target="_blank" rel="noopener" class="fs-link" title="GitHub" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://x.com/AgntSpce" target="_blank" rel="noopener" class="fs-link" title="X / Twitter" aria-label="X / Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://discord.gg/hcwQvggVR" target="_blank" rel="noopener" class="fs-link" title="Discord" aria-label="Discord">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+        </a>
+        <a href="https://youtube.com/@AgntSpce" target="_blank" rel="noopener" class="fs-link" title="YouTube" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="index.html">AgntSpce</a>
+      <a href="docs.html">Documentation</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="https://github.com/AniketWathore/agntspce">GitHub</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="security.html">Security</a>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Stay updated</h4>
+      <p class="fn-desc">Get the latest on multi-agent workflows and product updates.</p>
+      <form class="fn-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Enter your email" class="fn-input" required>
+        <button type="submit" class="fn-btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 AgntSpce. All rights reserved.</span>
+    <span class="footer-made">Built with AI</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e){
+  var btn = e.target.closest('.dropdown-btn');
+  if(btn){
+    e.preventDefault();
+    var menu = btn.nextElementSibling;
+    if(menu && menu.classList.contains('dropdown-menu')){
+      menu.classList.toggle('open');
+      btn.classList.toggle('active');
+    }
+  } else {
+    document.querySelectorAll('.dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); });
+    document.querySelectorAll('.dropdown-btn.active').forEach(function(b){ b.classList.remove('active'); });
+  }
+});
+</script>
 <script src="script.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function(){

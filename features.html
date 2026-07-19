@@ -1,20 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AgntSpce — The Only Multi Agent Workspace IDE focused on cost efficiency, productivity & power. A workspace where your AI agents plan, build, review, and deploy as a team.">
-<meta property="og:title" content="AgntSpce — Your AI Team Ships Together">
-<meta property="og:description" content="Multi-Agent Workspace IDE with built-in token reduction tools on every layer. 87% fewer tokens, 10x faster development.">
+<meta name="description" content="AgntSpce Features — Multi-Agent Execution, Token Reduction, Worktree Orchestration, Real-Time Terminal Streaming, and more.">
+<meta property="og:title" content="Features — AgntSpce">
+<meta property="og:description" content="Everything you need, nothing you don't. Explore all features of the Multi-Agent Workspace IDE.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://agntspace.space">
+<meta property="og:url" content="https://agntspace.space/features">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AgntSpce">
-<meta name="twitter:description" content="Your AI team ships together. 87% fewer tokens. 10x faster development.">
+<meta name="twitter:title" content="AgntSpce — Features">
+<meta name="twitter:description" content="Explore all features of AgntSpce: Multi-Agent Execution, Token Reduction, Worktree Orchestration, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-<title>AgntSpce — Multi-Agent Workspace IDE</title>
+<title>AgntSpce — Everything you need, nothing you don't.</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -41,7 +41,7 @@
           </a>
         </div>
       </div>
-      <a href="features.html" class="nav-link">Features</a>
+      <a href="features.html" class="nav-link" style="color:var(--accent)">Features</a>
       <div class="dropdown">
         <button class="dropdown-btn" data-dropdown="resources">
           Resources
@@ -74,7 +74,7 @@
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html" class="mobile-link">Home</a>
-    <a href="features.html" class="mobile-link">Features</a>
+    <a href="features.html" class="mobile-link" style="color:var(--accent)">Features</a>
     <a href="pricing.html" class="mobile-link">Pricing</a>
     <a href="docs.html" class="mobile-link">Documentation</a>
     <a href="about.html" class="mobile-link">About</a>
@@ -85,94 +85,148 @@
   </div>
 </header>
 
-<section class="hero" id="hero">
-  <div class="hero-body">
-    <div class="hero-container">
-      <h1 class="hero-headline">
-        <span class="hero-title-line">The only Multi Agent Workspace IDE focused on <span class="hero-title-gradient">cost efficiency, productivity &amp; power!</span></span>
-      </h1>
-      <div class="hero-actions">
-        <button class="dl-btn" id="dl-btn" onclick="location.href='download.html'">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span id="dl-text">Download</span>
-        </button>
-        <a href="about.html" class="btn-secondary">Learn More</a>
+<section class="page-hero">
+  <h1>Everything you need,<br>nothing you don't.</h1>
+  <p>AgntSpce combines multi-agent orchestration, token optimization, and workspace management into one seamless experience. No bloat, no compromises.</p>
+</section>
+
+<section class="section features-section" style="padding-top:0">
+  <div class="features-bg-gradient" data-parallax="0.04"></div>
+  <div class="section-inner">
+    <div class="feature-grid">
+      <div class="feature-row">
+        <div class="feature-row-image">
+          <img src="img/parallel.png" alt="Multi-Agent Execution" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Multi-Agent Execution</h3>
+          <p>Run Claude Code, Codex, Opencode, Gemini CLI simultaneously. Each agent runs in its own isolated PTY-backed terminal within a shared workspace.</p>
+        </div>
+      </div>
+      <div class="feature-row reverse">
+        <div class="feature-row-image">
+          <img src="img/agntspce%20output%20compression.png" alt="Token Reduction Layers" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Token Reduction Layers</h3>
+          <p>Output compression, semantic search integration, caveman skill injection — multiple layers of token optimization built into every agent session.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row-image">
+          <img src="img/workspace.png" alt="Worktree Orchestration" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Worktree Orchestration</h3>
+          <p>Each agent operates in an isolated git worktree. Branch-level isolation prevents conflicts, enables true parallel development, and keeps your main branch clean.</p>
+        </div>
+      </div>
+      <div class="feature-row reverse">
+        <div class="feature-row-image">
+          <img src="img/main.png" alt="Workspace Management" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Workspace Management</h3>
+          <p>Full CRUD with trash and restore functionality. Persistent agent and shell session state across workspace switches. Never lose your context.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row-image">
+          <img src="img/terminal.png" alt="Real-Time Terminal Streaming" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Real-Time Terminal Streaming</h3>
+          <p>Live output via Socket.IO with real-time status detection. Monitor idle, busy, waiting, and exited states for every agent in your workspace.</p>
+        </div>
+      </div>
+      <div class="feature-row reverse">
+        <div class="feature-row-image">
+          <img src="img/agntspce%20output%20compression.png" alt="Output Compression" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Output Compression</h3>
+          <p>Powered by RTK powered agntspce Command output compression — filters redundant output, deduplicates lines, and strips ANSI escape sequences. Achieve up to 87% smaller context windows.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row-image">
+          <img src="img/agntspce%20search%20mcp.png" alt="Semantic Search MCP" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Semantic Search MCP</h3>
+          <p>Index and search your entire codebase via the agntspce-search MCP server. Find relevant context across multiple projects in seconds, not minutes.</p>
+        </div>
+      </div>
+      <div class="feature-row reverse">
+        <div class="feature-row-image">
+          <img src="img/git%20review.png" alt="Git & Branch Tracking" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Git & Branch Tracking</h3>
+          <p>Auto branch detection on every session, worktree management, commit log, working tree diffs, and per-file diff review — all without leaving your IDE.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row-image">
+          <img src="img/code%20editor.png" alt="Built-in Code Editor" loading="lazy">
+        </div>
+        <div class="feature-row-content">
+          <h3>Built-in Code Editor</h3>
+          <p>Monaco-powered editor with syntax highlighting for 20+ languages, a full file tree, multi-tab editing, dirty indicators, and seamless workspace integration.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="showcase-video-section" id="showcase-video-section">
-  <div class="showcase-inner">
-    <div class="video-player" id="video-player">
-      <video id="showcase-video" autoplay muted loop playsinline>
-        <source src="img/agntspce-video.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-<section class="builders-section">
-  <div class="builders-inner">
-    <h2 class="builders-title">Trusted by builders from</h2>
-    <div class="builders-marquee">
-      <div class="builders-track">
-        <div class="builder-logo"><img src="img/microsoft-wordmark.svg" alt="Microsoft" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/openai-wordmark.svg" alt="OpenAI" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/vercel-wordmark.svg" alt="Vercel" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/cloudflare-wordmark.svg" alt="Cloudflare" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/datadog-wordmark.svg" alt="Datadog" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/bytedance-wordmark.svg" alt="ByteDance" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/salesforce-wordmark-dark.svg" alt="Salesforce" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/wix-wordmark.svg" alt="Wix" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/runway-wordmark.svg" alt="Runway" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/wordware-wordmark.svg" alt="Wordware" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/toss-wordmark.svg" alt="Toss" loading="lazy"></div>
-        <!-- duplicate for seamless loop -->
-        <div class="builder-logo"><img src="img/microsoft-wordmark.svg" alt="Microsoft" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/openai-wordmark.svg" alt="OpenAI" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/vercel-wordmark.svg" alt="Vercel" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/cloudflare-wordmark.svg" alt="Cloudflare" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/datadog-wordmark.svg" alt="Datadog" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/bytedance-wordmark.svg" alt="ByteDance" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/salesforce-wordmark-dark.svg" alt="Salesforce" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/wix-wordmark.svg" alt="Wix" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/runway-wordmark.svg" alt="Runway" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/wordware-wordmark.svg" alt="Wordware" loading="lazy"></div>
-        <div class="builder-logo"><img src="img/toss-wordmark.svg" alt="Toss" loading="lazy"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section features-section" id="features">
+<section class="section value-section">
   <div class="section-inner">
     <div class="section-header animate-up">
-      <span class="section-eyebrow">Features</span>
-      <h2 class="section-title">The core features that make<br>AgntSpce different.</h2>
-      <p class="section-desc">Multi-agent execution, token optimization, and worktree orchestration — built for real-world development.</p>
+      <span class="section-eyebrow">Why Choose Us</span>
+      <h2 class="section-title">Built differently to solve the real problems<br>of AI-assisted development.</h2>
     </div>
-    <div class="features-panel stagger-children">
-      <div class="fp-cell">
-        <div class="fp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+    <div class="value-grid stagger-children">
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <h3 class="fp-title">Multi-Agent Execution</h3>
-        <p class="fp-desc">Run Claude Code, Codex, Opencode, and Gemini CLI simultaneously — each in its own isolated PTY-backed terminal. No tab switching. No waiting.</p>
+        <h3 class="value-card-title">Cost Efficiency First</h3>
+        <p class="value-card-desc">Token optimization built into every layer. Reduce costs by up to 60% compared to traditional AI coding workflows.</p>
       </div>
-      <div class="fp-cell">
-        <div class="fp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
         </div>
-        <h3 class="fp-title">Token Reduction Layers</h3>
-        <p class="fp-desc">Cut costs across every layer — RTK powered agntspce Command output compression filters noise, semantic search indexes only what matters, and caveman skill strips all but essentials.</p>
+        <h3 class="value-card-title">Multi-Agent Power</h3>
+        <p class="value-card-desc">Harness multiple coding agents simultaneously. Each agent specializes, collaborates, and amplifies your team's output.</p>
       </div>
-      <div class="fp-cell">
-        <div class="fp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h3 class="fp-title">Worktree Orchestration</h3>
-        <p class="fp-desc">Each agent operates in its own isolated git worktree. Fan out tasks, compare results, and merge the winner — all without cross-contamination.</p>
+        <h3 class="value-card-title">Unified Workspace</h3>
+        <p class="value-card-desc">All your agents, all your code, one workspace. No more context switching between multiple tools and interfaces.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="value-card-title">Lightning Fast</h3>
+        <p class="value-card-desc">Built for speed. Parallel agent execution, optimized token pipelines, and zero-bloat architecture keep you moving.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="value-card-title">Enterprise Ready</h3>
+        <p class="value-card-desc">Security-first architecture with team collaboration, access controls, and audit logging built right in.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="value-card-title">Proven Results</h3>
+        <p class="value-card-desc">Teams using AgntSpce report 10x faster development cycles with 87% less token consumption on average.</p>
       </div>
     </div>
   </div>
@@ -180,14 +234,14 @@
 
 <section class="cta-section">
   <div class="cta-inner animate-scale">
-    <h2>Build 10x faster, spend 60% less.</h2>
-    <p>Join teams already shipping faster with AgntSpce. It's free, open-source, and runs entirely on your machine.</p>
+    <h2>Ready to experience the difference?</h2>
+    <p>Get started with AgntSpce today. Free, open-source, and built to ship.</p>
     <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
       <a href="download.html" class="btn-primary btn-large">
         Start Building Free
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="about.html" class="btn-secondary btn-large">Learn More</a>
+      <a href="docs.html" class="btn-secondary btn-large">Read the Docs</a>
     </div>
   </div>
 </section>

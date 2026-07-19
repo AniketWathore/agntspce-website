@@ -1,5 +1,20 @@
 (function(){
 
+/* ─── OS Detection for Download Button ─── */
+(function(){
+  var text = document.getElementById('dl-text');
+  if(text){
+    var ua = navigator.userAgent;
+    var os = 'mac';
+    if(ua.indexOf('Win') !== -1) os = 'windows';
+    else if(ua.indexOf('Linux') !== -1) os = 'linux';
+    var names = { mac:'Download for Mac', windows:'Download for Windows', linux:'Download for Linux' };
+    text.textContent = names[os] || 'Download';
+  }
+})();
+
+
+
 var header = document.getElementById('site-header');
 if(header){
   var ticking = false;
