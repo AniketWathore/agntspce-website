@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Documentation — AgntSpce</title>
-<meta name="description" content="AgntSpce Documentation — Complete guide to setup, features, configuration, and advanced usage for the Multi-Agent Workspace IDE.">
+<meta name="description" content="Complete guide to setup, features, configuration, and advanced usage for the Multi-Agent Workspace IDE.">
+<meta property="og:title" content="Documentation — AgntSpce">
+<meta property="og:description" content="Complete guide to setup, features, configuration, and advanced usage for the Multi-Agent Workspace IDE.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agntspace.space/documentation">
+<meta property="og:site_name" content="AgntSpce">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Documentation — AgntSpce">
+<meta name="twitter:description" content="Complete guide to setup, features, configuration, and advanced usage for the Multi-Agent Workspace IDE.">
+<link rel="canonical" href="https://agntspace.space/documentation">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -31,7 +40,7 @@
       <div class="dropdown">
         <button class="dropdown-btn">Resources <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="dropdown-menu">
-          <a href="docs.html" class="dropdown-item">Documentation</a>
+          <a href="documentation.html" class="dropdown-item">Documentation</a>
           <a href="about.html" class="dropdown-item">About</a>
           <a href="community.html" class="dropdown-item">Community</a>
         </div>
@@ -52,10 +61,10 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html" class="mobile-link">Home</a>
     <a href="features.html" class="mobile-link">Features</a>
-    <a href="about.html" class="mobile-link">About</a>
-    <a href="docs.html" class="mobile-link" style="color:var(--accent)">Documentation</a>
     <a href="pricing.html" class="mobile-link">Pricing</a>
-    <a href="download.html" class="mobile-link">Download</a>
+    <a href="documentation.html" class="mobile-link" style="color:var(--accent)">Documentation</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="changelog.html" class="mobile-link">Changelog</a>
     <a href="community.html" class="mobile-link">Community</a>
     <a href="https://github.com/AniketWathore/agntspce" target="_blank" rel="noopener" class="mobile-link">GitHub</a>
     <a href="download.html" class="mobile-cta">Download</a>
@@ -72,6 +81,7 @@
             <div>
               <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);padding:0 8px;margin-bottom:6px">Getting Started</div>
               <a href="#overview" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Overview</a>
+              <a href="#how-it-works" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">How It Works</a>
               <a href="#setup" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Setup Guide</a>
               <a href="#first-workspace" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Your First Workspace</a>
             </div>
@@ -81,6 +91,7 @@
               <a href="#agent-terminals" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Agent Terminals</a>
               <a href="#shell-terminals" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Shell Terminals</a>
               <a href="#code-editor" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Code Editor</a>
+              <a href="#file-explorer" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">File Explorer</a>
               <a href="#git-integration" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Git Integration</a>
               <a href="#dashboard" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Dashboard</a>
             </div>
@@ -89,6 +100,7 @@
               <a href="#caveman-mode" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Caveman Mode</a>
               <a href="#output-filter" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Output Filter</a>
               <a href="#parallel-tasks" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Parallel Tasks</a>
+              <a href="#worktrees" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Worktrees</a>
               <a href="#shortcuts" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Keyboard Shortcuts</a>
               <a href="#configuration" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Configuration</a>
             </div>
@@ -113,9 +125,33 @@
           </div>
         </section>
 
+        <section id="how-it-works">
+          <h2>How It Works</h2>
+          <p>AgntSpce is built around one idea: instead of running your AI coding agents in separate terminals and paying for every wasted token, bring them together in a single local workspace where they can work side by side.</p>
+          <h3>The workflow</h3>
+          <ol>
+            <li><strong>Create a workspace</strong> pointing at any local folder or git repository.</li>
+            <li><strong>Launch your agents</strong> — Claude Code, Codex, Opencode, Gemini CLI, and more — each in its own isolated PTY-backed terminal.</li>
+            <li><strong>Watch them work</strong> with live streaming output, status detection (idle, busy, waiting, exited), and a dashboard of activity.</li>
+            <li><strong>Cut token costs</strong> — RTK output compression, caveman mode, and semantic search reduce what goes into every agent's context.</li>
+            <li><strong>Orchestrate in parallel</strong> — fan tasks out across isolated git worktrees, compare results, and merge the winner.</li>
+          </ol>
+          <h3>What makes it different</h3>
+          <ul>
+            <li><strong>Local-first</strong> — everything runs on your machine, no cloud, no account.</li>
+            <li><strong>Token reduction on every layer</strong> — compression, filtering, and search keep costs low without losing context.</li>
+            <li><strong>Zero-config orchestration</strong> — AgntSpce auto-detects your installed agents and wires them up.</li>
+            <li><strong>Everything in one place</strong> — editor, git review, shell terminals, commander palette, and file explorer ship in the box.</li>
+          </ul>
+        </section>
+
         <section id="setup">
           <h2>Setup Guide</h2>
-          <p>Install AgntSpce and get it running on your machine in minutes. The app is distributed as source code that you clone, build, and run locally.</p>
+          <p>Install AgntSpce and get it running on your machine in minutes.</p>
+          <h3>Download the app</h3>
+          <p>The easiest way to get started is to grab the latest macOS installer from the <a href="download.html" style="color:var(--accent)">Download page</a> and open the <code>.dmg</code>. Windows and Linux builds are coming soon.</p>
+          <h3>Install from source</h3>
+          <p>Prefer to build it yourself? The app is fully open source. Clone the repository and follow the steps below.</p>
           <h3>Install dependencies</h3>
           <div class="code-block"><pre><code>npm install</code></pre></div>
           <h3>Run in development</h3>
@@ -193,10 +229,13 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
               <tr><td>Cursor Agent</td><td>fresh, continue</td><td>✓</td><td>✓</td></tr>
               <tr><td>Copilot</td><td>fresh, explain, suggest</td><td>✗</td><td>✗</td></tr>
               <tr><td>Mastra Code</td><td>fresh, continue, agent</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Droid</td><td>fresh, review, plan</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Amp</td><td>fresh, continue, agent</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Pi</td><td>fresh, chat, review</td><td>✓</td><td>✓</td></tr>
             </tbody>
           </table></div>
           <h3>Launching an agent</h3>
-          <p>Click the <strong>+</strong> button in the terminal tab bar or press <kbd>⌘⇧A</kbd>. A picker dialog shows all available agents detected on your system. You can configure the launch mode, CLI flags, model selection, and verbosity level before starting.</p>
+          <p>Click the <strong>+</strong> button in the terminal tab bar or press <kbd>⌘⇧A</kbd>. A picker dialog shows all available agents detected on your system. You can configure the launch mode, CLI flags, model selection, reasoning effort, and verbosity level before starting.</p>
           <h3>Status indicators</h3>
           <ul>
             <li><span class="status-dot idle"></span> <strong>Idle</strong> — Agent is running and waiting for input</li>
@@ -230,6 +269,21 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
           </ul>
           <h3>Supported languages</h3>
           <p>TypeScript, JavaScript, Python, Rust, Go, Ruby, Java, C++, C#, CSS, HTML, JSON, Markdown, YAML, SQL, Shell, Dockerfile, TOML, GraphQL, and more. Language support is detected automatically from file extensions.</p>
+        </section>
+
+        <section id="file-explorer">
+          <h2>File Explorer</h2>
+          <p>Browse your workspace files directly in the sidebar, without leaving AgntSpce.</p>
+          <h3>Tree view</h3>
+          <p>The file tree shows your workspace directory, sorted with directories first. Dotfiles are hidden by default. Click to expand and collapse folders.</p>
+          <h3>File operations</h3>
+          <ul>
+            <li><strong>Create file</strong> — Create an empty file in any directory</li>
+            <li><strong>Create folder</strong> — Create a new subdirectory</li>
+            <li><strong>Rename</strong> — Rename files and folders</li>
+            <li><strong>Delete</strong> — Delete files or entire directories</li>
+          </ul>
+          <p>All operations go through the backend and write directly to disk, so the file explorer always reflects the real state of your workspace.</p>
         </section>
 
         <section id="git-integration">
@@ -323,6 +377,20 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
           </ul>
         </section>
 
+        <section id="worktrees">
+          <h2>Worktrees</h2>
+          <p>Git worktrees let you check out multiple branches of the same repository simultaneously in separate directories — perfect for running parallel agent sessions without conflicts.</p>
+          <h3>Enabling worktrees</h3>
+          <p>Worktrees are configured per workspace. When enabled, AgntSpce creates worktree directories (e.g., <code>work1</code>, <code>work2</code>) alongside your repo and sets up a git worktree for each.</p>
+          <h3>How agents use them</h3>
+          <p>Agents with <strong>worktree support</strong> (Claude Code, Opencode, Codex, Cursor Agent, and more) automatically get their own isolated worktree directory when launched in parallel. Each agent operates on its own branch (<code>&lt;name&gt;-dev</code>), so there's no cross-contamination — you compare results and merge the winner.</p>
+          <h3>Managing worktrees</h3>
+          <ul>
+            <li><strong>Add</strong> — Create a new worktree from the base branch (master/main)</li>
+            <li><strong>Remove</strong> — Related sessions are closed, then the git worktree is cleaned up</li>
+          </ul>
+        </section>
+
         <section id="shortcuts">
           <h2>Keyboard Shortcuts</h2>
           <div style="overflow-x:auto"><table>
@@ -330,12 +398,15 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
             <tbody>
               <tr><td><kbd>⌘N</kbd></td><td>New Window</td></tr>
               <tr><td><kbd>⌘⇧N</kbd></td><td>New Workspace</td></tr>
+              <tr><td><kbd>⌘O</kbd></td><td>Load Workspace</td></tr>
               <tr><td><kbd>⌘⇧A</kbd></td><td>New Agent Session</td></tr>
               <tr><td><kbd>⌘⇧S</kbd></td><td>New Shell Terminal</td></tr>
               <tr><td><kbd>⌘S</kbd></td><td>Save Workspace / File</td></tr>
               <tr><td><kbd>⌘W</kbd></td><td>Close Window / Tab</td></tr>
-              <tr><td><kbd>⌘K</kbd></td><td>Toggle Command Palette</td></tr>
+              <tr><td><kbd>⌘K</kbd></td><td>Toggle Commander Palette</td></tr>
               <tr><td><kbd>⌘B</kbd></td><td>Toggle Chat Sidebar</td></tr>
+              <tr><td><kbd>⌘⇧B</kbd></td><td>Toggle Workspace Sidebar</td></tr>
+              <tr><td><kbd>⌘⇧F</kbd></td><td>Toggle Focus Mode</td></tr>
               <tr><td><kbd>⌘Tab</kbd> / <kbd>⌘⇧Tab</kbd></td><td>Cycle Agent Tabs</td></tr>
               <tr><td><kbd>⌘1</kbd> — <kbd>⌘9</kbd></td><td>Switch to tab by index</td></tr>
             </tbody>
@@ -395,7 +466,7 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
         <img src="logo.svg" alt="AgntSpce" class="logo-img" width="36" height="36">
         <span class="logo-text">AgntSpce</span>
       </a>
-      <p class="footer-tagline">The Only Cost optimised Workspace IDE for multiple coding AI agents all communicate, coordinate and ship together</p>
+      <p class="footer-tagline">The Only Multi-Agent IDE focused on Cost Efficiency, Productivity and Power!</p>
       <div class="footer-social">
         <a href="https://github.com/AniketWathore/agntspce" target="_blank" rel="noopener" class="fs-link" title="GitHub" aria-label="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -406,15 +477,15 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
         <a href="https://discord.gg/hcwQvggVR" target="_blank" rel="noopener" class="fs-link" title="Discord" aria-label="Discord">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
         </a>
-        <a href="https://youtube.com/@AgntSpce" target="_blank" rel="noopener" class="fs-link" title="YouTube" aria-label="YouTube">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <a href="https://linkedin.com/company/agntspce" target="_blank" rel="noopener" class="fs-link" title="LinkedIn" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
         </a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Product</h4>
       <a href="index.html">AgntSpce</a>
-      <a href="docs.html">Documentation</a>
+      <a href="documentation.html">Documentation</a>
       <a href="changelog.html">Changelog</a>
       <a href="https://github.com/AniketWathore/agntspce">GitHub</a>
     </div>

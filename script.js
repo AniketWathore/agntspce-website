@@ -1,6 +1,43 @@
 (function(){
 
-/* â”€â”€â”€ Download Button â”€â”€â”€ */
+/* ─── Beta Banner ─── */
+(function(){
+  var body = document.body;
+  if(!body) return;
+  var banner = document.createElement('div');
+  banner.className = 'beta-banner';
+  banner.innerHTML = '<span class="beta-badge">Beta is live</span><a href="download.html" class="beta-link">Try the beta now <span class="beta-arrow">&rarr;</span></a>';
+  body.classList.add('has-banner');
+  body.insertBefore(banner, body.firstChild);
+  var ticking = false;
+  function update(){
+    body.classList.toggle('banner-hidden', window.scrollY > 60);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  update();
+})();
+
+/* ─── Download Button (auto OS) ─── */
+(function(){
+  var dlText = document.getElementById('dl-text');
+  var dlIcon = document.querySelector('#dl-btn img');
+  if(!dlText) return;
+  var ua = navigator.userAgent;
+  var os = 'mac';
+  if(/Windows/i.test(ua)) os = 'windows';
+  else if(/Linux/i.test(ua)) os = 'linux';
+  else if(/Mac/i.test(ua)) os = 'mac';
+  var labels = { mac:'Download for macOS', windows:'Download for Windows', linux:'Download for Linux' };
+  var icons  = { mac:'img/macos-icon.png', windows:'img/windows-icon.png', linux:'img/linux-icon.png' };
+  dlText.textContent = labels[os];
+  if(dlIcon) dlIcon.src = icons[os];
+})();
 
 /* ─── Scroll Pop Reveal ─── */
 (function(){
@@ -714,6 +751,41 @@ if(wfSection){
     vdObs.observe(card);
 
 
+})();
+
+/* ─── Feature Image Lightbox ─── */
+(function(){
+  var body = document.body;
+  if(!body) return;
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  var img = document.createElement('img');
+  img.alt = '';
+  overlay.appendChild(img);
+  body.appendChild(overlay);
+  var open = false;
+  function show(src, alt){
+    img.src = src;
+    img.alt = alt || '';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    open = true;
+  }
+  function hide(){
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    open = false;
+  }
+  overlay.addEventListener('click', hide);
+  document.addEventListener('keydown', function(e){
+    if(open && e.key === 'Escape') hide();
+  });
+  document.querySelectorAll('.feature-row-image img').forEach(function(el){
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', function(){
+      show(el.currentSrc || el.src, el.alt);
+    });
+  });
 })();
 
 /* ─── Hero Typing Animation (removed) ─── */
