@@ -112,6 +112,46 @@
 
 <div class="legal-content">
   <div style="margin-bottom:48px">
+    <h2 style="margin-top:0">Beta — August 22, 2026</h2>
+    <p>Windows beta release, plus major chat assistant upgrades, security hardening, and performance work across the board.</p>
+    <h3>Chat Assistant</h3>
+    <ul>
+      <li>Image and file attachments in chat with multimodal provider support, per-thread context persistence, and size caps</li>
+      <li>Replies now render with proper markdown formatting, and full history always renders (removes blank gaps from scroll windowing)</li>
+      <li>Chat restores the model last used per session instead of defaulting to the first configured provider</li>
+      <li>AI provider stream errors are surfaced in the chat UI instead of dumping raw APICallError output</li>
+    </ul>
+    <h3>Token Dashboard</h3>
+    <ul>
+      <li>Token savings dashboard persists across app restarts with a per-session breakdown</li>
+      <li>Wrapper token stats attributed to real sessions instead of the system bucket, with stale system-bucket stats purged</li>
+      <li>Dashboard reset button and persisted session filter history</li>
+    </ul>
+    <h3>Agent Grid &amp; Workspace</h3>
+    <ul>
+      <li>Track-based agent tiling for 5+ agents with a working full-screen focus mode</li>
+      <li>Live sessions restored on app restart with stable grid tiling</li>
+      <li>Fixed agent and shell overlap in the terminal grid</li>
+      <li>Workspace selection returns to the agent screen from the file viewer</li>
+      <li>Bottom shell shown in file viewer; fixed dashboard file-open black screen</li>
+    </ul>
+    <h3>Security Hardening</h3>
+    <ul>
+      <li>Hardened IPC and window surface, encrypted chat keys</li>
+      <li>Fixed output buffer O(n²) behavior, drag event leaks, and re-render storms</li>
+    </ul>
+    <h3>Performance &amp; Reliability</h3>
+    <ul>
+      <li>Deep performance audit — reduced render churn and idle resource usage</li>
+      <li>Lazy session restore and re-render isolation</li>
+      <li>Reduced RAM/GC churn via output caps, cached byte lengths, socket batching, and throttled stats</li>
+      <li>Restored agntspce-search MCP token signing and deduped wrapper command echo</li>
+      <li>Terminal junk output removal, dead code cleanup, and 62 backend type errors fixed</li>
+      <li>AgntSpce CoC working fixes</li>
+    </ul>
+  </div>
+
+  <div style="border-top:1px solid var(--border);padding-top:32px;margin-bottom:48px">
     <h2 style="margin-top:0">Beta — August 15, 2026</h2>
     <p>The first public beta of AgntSpce — the Multi-Agent Workspace IDE focused on cost efficiency, productivity, and power.</p>
     <h3>Multi-Agent Orchestration</h3>

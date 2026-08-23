@@ -111,12 +111,14 @@
               <a href="#code-editor" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Code Editor</a>
               <a href="#file-explorer" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">File Explorer</a>
               <a href="#git-integration" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Git Integration</a>
+              <a href="#chat-assistant" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Chat Assistant</a>
               <a href="#dashboard" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Dashboard</a>
             </div>
             <div>
               <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);padding:0 8px;margin-bottom:6px">Advanced</div>
               <a href="#caveman-mode" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Caveman Mode</a>
               <a href="#output-filter" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Output Filter</a>
+              <a href="#search-mcp" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Search MCP</a>
               <a href="#parallel-tasks" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Parallel Tasks</a>
               <a href="#worktrees" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Worktrees</a>
               <a href="#shortcuts" style="display:block;padding:4px 8px;font-size:12px;color:var(--text-secondary);border-radius:var(--radius-sm)">Keyboard Shortcuts</a>
@@ -135,8 +137,8 @@
           <div class="info-box">
             <strong>Requirements</strong>
             <ul>
-              <li><strong>macOS</strong> (Apple Silicon or Intel) — Windows and Linux support planned</li>
-              <li><strong>Node.js 18+</strong> and npm</li>
+              <li><strong>macOS</strong> (Apple Silicon or Intel) or <strong>Windows</strong> 10 / 11 x64 (beta) — Linux builds coming soon</li>
+              <li><strong>Node.js 18+</strong> and npm (only needed when building from source)</li>
               <li><strong>Git</strong> installed</li>
               <li>One or more <strong>AI coding CLI tools</strong> — Claude Code, Opencode, Codex, Gemini CLI, or any PTY-compatible agent</li>
             </ul>
@@ -167,7 +169,11 @@
           <h2>Setup Guide</h2>
           <p>Install AgntSpce and get it running on your machine in minutes.</p>
           <h3>Download the app</h3>
-          <p>The easiest way to get started is to grab the latest macOS installer from the <a href="download.html" style="color:var(--accent)">Download page</a> and open the <code>.dmg</code>. Windows and Linux builds are coming soon.</p>
+          <p>The easiest way to get started is to grab the latest installer from the <a href="download.html" style="color:var(--accent)">Download page</a> — open the <code>.dmg</code> on macOS (Apple Silicon) or run the <code>.exe</code> installer on Windows 10/11. A Linux build is coming soon.</p>
+          <div class="info-box" style="border-color:rgba(34,197,94,.25)">
+            <strong>Note for Windows users</strong>
+            <p style="margin:8px 0 0">The Windows build is in beta and may have issues. If you run into problems, please <a href="https://github.com/AniketWathore/agntspce/issues" target="_blank" rel="noopener" style="color:var(--accent)">raise an issue on GitHub</a>.</p>
+          </div>
           <h3>Install from source</h3>
           <p>Prefer to build it yourself? The app is fully open source. Clone the repository and follow the steps below.</p>
           <h3>Install dependencies</h3>
@@ -263,6 +269,10 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
           </ul>
           <h3>Auto-restart</h3>
           <p>Claude Code sessions can be configured to auto-restart when they exit. Enable this behavior in Settings &gt; Agent &gt; Auto-restart. This is useful for long-running development workflows where the agent should resume after completing a task.</p>
+          <h3>Grid layouts &amp; focus mode</h3>
+          <p>Agent windows tile automatically with layout presets (auto, 1×1, 2×2, 1+2, 3×3) that adapt as you add sessions — including dedicated track-based tiling for 5+ agents. Resize any pane with the grid handles, or press <kbd>⌘⇧F</kbd> for full-screen focus mode on the active agent.</p>
+          <h3>Session persistence</h3>
+          <p>Live sessions are restored when you restart the app — output buffers, statuses, and layout come back exactly where you left them. Workspace switching preserves all sessions too.</p>
         </section>
 
         <section id="shell-terminals">
@@ -321,6 +331,23 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
           <p>AgntSpce supports git worktrees for running parallel agent sessions on different branches simultaneously. Each worktree gets its own isolated working directory while sharing the same git repository, enabling true parallel development without branch conflicts.</p>
         </section>
 
+        <section id="chat-assistant">
+          <h2>Chat Assistant</h2>
+          <p>A built-in AI chat sidebar (<kbd>⌘B</kbd>) for quick questions, code explanations, and second opinions — without leaving your workspace.</p>
+          <h3>Bring your own provider</h3>
+          <p>Configure API keys in <strong>Settings &gt; Chat</strong>. AgntSpce ships with provider templates (OpenAI, Anthropic, Google, DeepSeek and more) and supports custom providers via base URL — so any OpenAI-compatible endpoint works. Available models are fetched directly from each provider's API.</p>
+          <h3>Threads &amp; context</h3>
+          <ul>
+            <li><strong>Persistent threads</strong> — Conversations are saved per thread with full context persistence; pick up any thread where you left off</li>
+            <li><strong>Model memory</strong> — Each thread remembers the model you last used instead of defaulting back to the first configured provider</li>
+            <li><strong>Markdown rendering</strong> — Replies render with proper markdown formatting and full history always displays</li>
+          </ul>
+          <h3>Attachments</h3>
+          <p>Attach images and files to your messages. Multimodal providers can see attached images directly, and file attachments are included as context. Attachment size caps keep requests within provider limits.</p>
+          <h3>Security</h3>
+          <p>API keys are encrypted at rest and never sent anywhere except to the provider you configured. Provider stream errors are surfaced cleanly in the chat UI instead of raw error dumps.</p>
+        </section>
+
         <section id="dashboard">
           <h2>Dashboard</h2>
           <p>The Dashboard provides at-a-glance visibility into your workspace activity, agent health, and resource usage.</p>
@@ -339,6 +366,13 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
             <li>Token reduction percentage by session</li>
             <li>Filter rules applied and their individual impact</li>
             <li>Historical trends and cumulative savings</li>
+          </ul>
+          <h3>Persistent savings &amp; per-session breakdown</h3>
+          <ul>
+            <li><strong>Survives restarts</strong> — Cumulative token savings are persisted to disk, so your totals survive app restarts (they are never reset on launch)</li>
+            <li><strong>Per-session attribution</strong> — Wrapper stats are attributed to the real agent sessions that produced them, not a generic system bucket</li>
+            <li><strong>Sessions view</strong> — Per-session breakdown with persisted filter history so you can see which sessions saved the most</li>
+            <li><strong>Reset button</strong> — Purge stale stats and start fresh anytime from the dashboard</li>
           </ul>
         </section>
 
@@ -379,6 +413,21 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
           </ul>
           <h3>Debug panel</h3>
           <p>The Output Filter includes a debug panel that shows real-time statistics: original byte count vs filtered byte count, reduction percentage, number of rules applied per event, and a log of filtered content for troubleshooting.</p>
+        </section>
+
+        <section id="search-mcp">
+          <h2>AgntSpce Search MCP</h2>
+          <p>Semantic code search exposed over the <strong>Model Context Protocol (MCP)</strong> — your agents can search the entire codebase by meaning instead of grepping by keyword, keeping prompts small and context relevant.</p>
+          <h3>How it works</h3>
+          <p>AgntSpce indexes your workspace with <a href="https://github.com/MinishLab/semble" target="_blank" rel="noopener" style="color:var(--accent)">Semble</a> embeddings into a local index (stored in <code>.agntspce/file-index.json</code>). A scan runs once at workspace creation and stays incremental afterwards. The index is then served to your agents through an MCP server with a prebuilt binary package and PYTHONHOME wrapper — no manual setup required.</p>
+          <h3>Agent wiring</h3>
+          <p>When enabled, AgntSpce wires the MCP server into your detected agents automatically:</p>
+          <ul>
+            <li><strong>Claude Code</strong> — registered via <code>~/.claude/settings.json</code></li>
+            <li><strong>Opencode</strong> — registered via <code>~/.config/opencode/opencode.json</code></li>
+            <li><strong>Codex</strong> — registered via its config</li>
+          </ul>
+          <p>Once wired, agents can call semantic search as a tool during any session.</p>
         </section>
 
         <section id="parallel-tasks">
@@ -462,6 +511,9 @@ git clone https://github.com/user/repo.git ~/AgntSpce/my-project</code></pre></d
               <tr><td><code>~/.agent-workspace/session-buffers/</code></td><td>Session output buffers and history</td></tr>
               <tr><td><code>~/.agent-workspace/caveman-data.json</code></td><td>Caveman mode configuration data</td></tr>
               <tr><td><code>~/.agent-workspace/config.json</code></td><td>User preferences and app settings</td></tr>
+              <tr><td><em>User data dir</em><code>/filter-stats.json</code>, <code>/filter-history.json</code></td><td>Persistent token savings stats and filter history (survive restarts)</td></tr>
+              <tr><td><em>User data dir</em><code>/chat-config.json</code></td><td>Chat assistant provider settings — API keys stored encrypted at rest</td></tr>
+              <tr><td><em>User data dir</em><code>/chat-history.json</code></td><td>Chat assistant threads and message history</td></tr>
             </tbody>
           </table>
         </section>
